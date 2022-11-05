@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: x
+  labels:
+    app: x
+spec:
+  selector:
+    matchLabels:
+      app: x
+  template:
+    metadata:
+      labels:
+        app: x
+    spec:
+      containers:
+      - image: x-image
+        ports:
+        - containerPort: 8080
+          targetPort: 8080
+          protocol: TCP
