@@ -8,5 +8,3 @@ images:
 - name: x-image
   newName: ghcr.io/juanjoss/x
   newTag: e5266ddebe92fc46f43355e9f462ede1728b6a55
-- name: x-image:juanjoss/x
-  newTag: 9b4bb94438ff3f38de0ff6e2e1ca7872529e9ab6
