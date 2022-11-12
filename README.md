@@ -18,4 +18,4 @@ The workflow is based on a [Pull-based GitOps Deployment](https://www.gitops.tec
 
     - Updates the kubernetes manifests files inside `xconfig` using kustomize.
 
-2. The `CD pipeline` configured in `xconfig` has to be triggered manually since running it twice will fail due to terraform's inability to detect existing infrastructure. The pipeline provisions a GKE cluster inside GCP using Terraform, setups ArgoCD, syncs with `xconfig` and deploy `x` inside the cluster.
+2. The `CD pipeline` configured in `xconfig` has to be triggered manually since running it twice will fail due to terraform's inability to detect existing infrastructure. The pipeline provisions a GKE cluster inside GCP using Terraform, setups ArgoCD, syncs with `xconfig` and deploy `x` inside the cluster in a new namespace `dev`.

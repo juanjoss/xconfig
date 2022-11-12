@@ -18,14 +18,11 @@ spec:
     namespace: dev
   syncPolicy:
     automated:
-      prune: true 
       selfHeal: true
-      allowEmpty: false 
-    syncOptions: 
-    - Validate=false 
-    - CreateNamespace=true 
-    - PrunePropagationPolicy=foreground 
-    - PruneLast=true 
+      allowEmpty: false
+    syncOptions:
+    - Validate=false
+    - CreateNamespace=true
     retry:
       limit: 5 
       backoff:
