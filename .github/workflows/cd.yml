@@ -25,7 +25,7 @@ jobs:
           GOOGLE_CREDENTIALS: ${{ secrets.GOOGLE_CREDENTIALS }}
 
       - name: Terraform format
-        run: terraform -chdir=terraform/ fmt -check >> $GITHUB_OUTPUT
+        run: terraform -chdir=terraform/ fmt -check >> $GITHUB_STATE
 
       - name: Terraform plan
         run: terraform -chdir=terraform/ plan
