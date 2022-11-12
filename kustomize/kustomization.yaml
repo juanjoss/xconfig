@@ -8,3 +8,4 @@ images:
 - name: x-image
   newName: juanjoss/x
   newTag: latest
+- name: x-image:juanjoss/x
