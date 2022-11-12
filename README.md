@@ -15,15 +15,7 @@ The workflow is based on a [Pull-based GitOps Deployment](https://www.gitops.tec
     - Tests using the `go test` tooling.
     
     - Builds and pushes the container image to ghcr using Docker.
-    
-    - Scans the container image.
-
-    - Signs the image using cosign.
 
     - Updates the kubernetes manifests files inside `xconfig` using kustomize.
 
-2. The `CD pipeline` configured in `xconfig` is triggered by the changes made by the CI pipeline and it will perform two main jobs:
-
-    - Provision a GKE cluster inside GCP using Terraform.
-
-    - Setup ArgoCD, sync with `xconfig` and deploy `x` inside the cluster.
+2. The `CD pipeline` configured in `xconfig` has to be triggered manually since running it twice will fail due to terraform's inability to detect existing infrastructure. The pipeline provisions a GKE cluster inside GCP using Terraform, setups ArgoCD, syncs with `xconfig` and deploy `x` inside the cluster.
