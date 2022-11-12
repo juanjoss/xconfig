@@ -28,7 +28,8 @@ spec:
         app: x
     spec:
       containers:
-      - image: ghcr.io/juanjoss/x:e5266ddebe92fc46f43355e9f462ede1728b6a55
+      - name: x
+        image: ghcr.io/juanjoss/x:e5266ddebe92fc46f43355e9f462ede1728b6a55
         livenessProbe:
           initialDelaySeconds: 15
           periodSeconds: 20
@@ -37,7 +38,6 @@ spec:
         ports:
         - containerPort: 8080
           protocol: TCP
-          targetPort: 8080
         readinessProbe:
           httpGet:
             path: /

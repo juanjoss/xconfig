@@ -14,10 +14,10 @@ spec:
         app: x
     spec:
       containers:
-      - image: x-image
+      - name: x
+        image: x-image
         ports:
         - containerPort: 8080
-          targetPort: 8080
           protocol: TCP
         resources:
           requests:
