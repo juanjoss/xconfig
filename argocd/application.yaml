@@ -10,7 +10,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/juanjoss/x.git
+    repoURL: https://github.com/juanjoss/xconfig.git
     targetRevision: HEAD 
     path: manifests
   destination:
