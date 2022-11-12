@@ -24,8 +24,8 @@ jobs:
         env:
           GOOGLE_CREDENTIALS: ${{ secrets.GOOGLE_CREDENTIALS }}
 
-      - name: Terraform format
-        run: terraform -chdir=terraform/ fmt -check >> $GITHUB_STATE
+      - name: Terraform validate
+        run: terraform -chdir=terraform/ validate
 
       - name: Terraform plan
         run: terraform -chdir=terraform/ plan
