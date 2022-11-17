@@ -10,6 +10,10 @@ The workflow is based on a [Pull-based GitOps Deployment](https://www.gitops.tec
 
 ![gitops-pull-workflow](https://www.gitops.tech/images/pull.png)
 
+This is the generalized process.
+
+![gitops-drawing](https://drive.google.com/uc?export=view&id=14buqj1e8yInpn5qm4sMLGj0NW1d-wmLq)
+
 1. The `CI pipeline` configured in `x` is triggered on a push and performs the following steps:
 
     - Tests using the `go test` tooling.
