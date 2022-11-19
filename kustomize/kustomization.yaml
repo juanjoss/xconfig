@@ -7,4 +7,4 @@ resources:
 images:
 - name: x-image
   newName: ghcr.io/juanjoss/x
-  newTag: e5266ddebe92fc46f43355e9f462ede1728b6a55
+  newTag: 9c89139290b644d862063a71097f1423bb6174f8
