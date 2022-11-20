@@ -28,11 +28,8 @@ This is the generalized process.
     
         ```bash
         terraform -chdir=terraform/ init
-        
         terraform -chdir=terraform/ validate
-        
         terraform -chdir=terraform/ plan
-        
         terraform -chdir=terraform/ apply -auto-approve
         ```
     
@@ -40,17 +37,17 @@ This is the generalized process.
 
     - Deploy and access `x`.
 
-        This will tell ArgoCD to sync with `xconfig` and start watching changes in the `/manifests` directory in this repo.
         ```bash
         kubectl -n argocd apply -f ./argocd/application.yaml
         ```
+        This will tell ArgoCD to sync with `xconfig` and start watching changes inside the `/manifests` directory in this repo.
 
         Now a new namespace (dev) should be created with `x` resources inside it, and it should be accesible (using port forwarding in this case).
         ```bash
         # namespace "dev" should exist
         kubectl get ns
 
-        # check out x
+        # check out x resources
         kubectl -n dev get all
         
         # use port forwarding to access x
