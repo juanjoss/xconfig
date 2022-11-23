@@ -28,7 +28,7 @@ spec:
         app: x
     spec:
       containers:
-      - image: ghcr.io/juanjoss/x:9c89139290b644d862063a71097f1423bb6174f8
+      - image: ghcr.io/juanjoss/x:13ea02c5a9f6de2d44c0d96d45c55e0556bcf115
         livenessProbe:
           initialDelaySeconds: 15
           periodSeconds: 20
